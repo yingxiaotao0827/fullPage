@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>轮播</title>
+  <link rel="stylesheet" type="text/css" href="static/fullpage.css" />
+  <style>
+    .fullimg{
+      max-width:100vw;
+      max-height:100vh;
+    }
+    .fp-slide {
+        text-align: center;
+    }
+    .fp-bottom {
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div id="myContainer">
+  <div class="section">
+    <div class="slide">
+      <img src="static/images/table1.jpg" class="fullimg" alt="投诉图片">
+    </div>
+    <div class="slide">
+      <img  class="fullimg" src="static/images/1.jpg" alt="投诉图片">
+    </div>
+    <div class="slide">
+      <img  class="fullimg" src="static/images/2.png" alt="投诉图片">
+    </div>
+    <div class="slide">
+      <img  class="fullimg" src="static/images/3.jpg" alt="投诉图片">
+    </div>
+    <div class="slide">
+      <img  class="fullimg" src="static/images/4.jpg" alt="投诉图片">
+    </div>
+  </div>
+</div>
+<input type="hidden" id="_4" value="1" />
+<script type="text/javascript" src="static/fullpage.continuousHorizontal.limited.min.js"></script>
+<script type="text/javascript" src="static/fullpage.extensions.min.js"></script>
+
+<script type="text/javascript">
+  var fp = new fullpage('#myContainer', {
+    sectionsColor: ['#191970'],
+    menu: '#menu',
+    controlArrows: false,
+    continuousHorizontal: true,
+    slidesNavigation: true,
+  });
+
+  setInterval(function() {
+    fp.moveSlideRight();
+  }, 6000);
+</script>
+</body>
+</html>
